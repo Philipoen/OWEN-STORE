@@ -25,10 +25,6 @@ export async function POST(request) {
       success_url: `${process.env.NEXT_PUBLIC_URL}/success`,
       cancel_url: `${process.env.NEXT_PUBLIC_URL}/cart`,
       customer_email: email,
-      billing_details: {
-        name: name,
-        email: email,
-      },
     });
 
     return Response.json({ url: session.url });

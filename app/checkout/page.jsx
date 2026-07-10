@@ -3,10 +3,6 @@
 import Header from '@/components/Header';
 import Checkout from '@/components/Checkout';
 
-export const metadata = {
-  title: 'Betalning - OWEN',
-};
-
 export default function CheckoutPage() {
   return (
     <>

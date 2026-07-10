@@ -3,10 +3,6 @@
 import Header from '@/components/Header';
 import Cart from '@/components/Cart';
 
-export const metadata = {
-  title: 'Varukorg - OWEN',
-};
-
 export default function CartPage() {
   return (
     <>

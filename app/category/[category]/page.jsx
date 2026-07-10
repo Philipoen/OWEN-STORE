@@ -6,9 +6,8 @@ import { getProductsByCategory } from '@/lib/products';
 
 export default function CategoryPage({ params }) {
   const category = decodeURIComponent(params.category);
-  const products = getProductsByCategory(
-    category.charAt(0).toUpperCase() + category.slice(1)
-  );
+  const categoryCapitalized = category.charAt(0).toUpperCase() + category.slice(1);
+  const products = getProductsByCategory(categoryCapitalized);
 
   return (
     <>
@@ -16,7 +15,7 @@ export default function CategoryPage({ params }) {
       <main className="bg-dark min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold text-gold mb-2 uppercase tracking-widest">
-            {category.toUpperCase()}
+            {categoryCapitalized}
           </h1>
           <p className="text-gray-400 mb-12">
             Utforska vår exklusiva kollektion av {category.toLowerCase()}

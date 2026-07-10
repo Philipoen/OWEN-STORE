@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import './layout.css';
 import '@/globals.css';
 
 export const metadata = {
@@ -10,7 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="sv">
-      <body>
+      <body className="bg-dark">
         {children}
         <footer className="bg-darkGray border-t border-gold/30 py-12 mt-16">
           <div className="max-w-7xl mx-auto px-4">

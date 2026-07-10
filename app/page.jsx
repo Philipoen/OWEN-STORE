@@ -5,11 +5,6 @@ import ProductCard from '@/components/ProductCard';
 import Link from 'next/link';
 import { getFeaturedProducts, categories } from '@/lib/products';
 
-export const metadata = {
-  title: 'OWEN - Luxury Women\'s Fashion',
-  description: 'Discover premium lingerie and women\'s fashion at OWEN',
-};
-
 export default function HomePage() {
   const featured = getFeaturedProducts();
 
@@ -54,16 +49,11 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-4xl font-bold text-gold mb-12 uppercase tracking-widest">DESTACADE PRODUKTER</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-              {featured.map((product) => {
-                const category = categories.find((cat) =>
-                  Object.values({ BH: '', Trosor: '', Träningskläder: '', Kjolar: '', Tajts: '', Stockings: '' })
-                );
-                return (
-                  <div key={product.id} className="lg:col-span-2">
-                    <ProductCard product={product} category="" />
-                  </div>
-                );
-              })}
+              {featured.map((product) => (
+                <div key={product.id} className="lg:col-span-2">
+                  <ProductCard product={product} category="" />
+                </div>
+              ))}
             </div>
           </div>
         </section>
